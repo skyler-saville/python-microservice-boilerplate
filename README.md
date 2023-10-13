@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/skyler-saville/python-microservice-boilerplate/actions/workflows/devops.yml/badge.svg)](https://github.com/skyler-saville/python-microservice-boilerplate/actions/workflows/devops.yml)
+
 # python-microservice-boilerplate
 
 1. Create a Python Virtual Environment `virtualenv ~/.venv` and add sourcing to `~/.bashrc`
