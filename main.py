@@ -1,15 +1,39 @@
 from fastapi import FastAPI
 import uvicorn
-from mylib.logic import wiki
+from mylib.logic import search_wiki
+from mylib.logic import wiki as summary_wiki
+from mylib.logic import phrase as phrase_wiki
 
 app = FastAPI()
 
 
 @app.get("/")
 async def root():
-    result = wiki()
-    print(result)
-    return {"default message": result}
+    """Return default value"""
+    default = summary_wiki()
+    print(default)
+    return {"message": "Welcome to the web interface!", "default": default}
+
+
+@app.get("/search/{value}")
+async def search(value: str):
+    """Search Wikipedia for Value"""
+    result = search_wiki(value)
+    return {"result": result}
+
+
+@app.get("/summary/{value}")
+async def summary(value: str):
+    """Retreive Wikipedia Page"""
+    result = summary_wiki(value)
+    return {"result": result}
+
+
+@app.get("/phrases/{value}")
+async def phrases(value: str):
+    """Retreive Wikipedia Page"""
+    result = phrase_wiki(value)
+    return {"result": result}
 
 
 @app.get("/add/{num1}/{num2}")
