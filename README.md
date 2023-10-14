@@ -6,3 +6,4 @@
 2. Create empty files: `Makefile`, `requirements.txt`, `main.py`, `Dockerfile`, `mylib/__init__.py`, `mylib/logic.py`
 3. Populate `Makefile`
 4. Setup Continuous Integration, i.e. check for code issues like lint errors and reformat code
+5. Build CLI using the Python Fire library. `./cli-fire.py --help` to test logic
