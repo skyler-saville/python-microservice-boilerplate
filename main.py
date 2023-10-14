@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 import uvicorn
+import nltk
 from mylib.logic import search_wiki
 from mylib.logic import wiki as summary_wiki
 from mylib.logic import phrase as phrase_wiki
+
+nltk.download("brown")
 
 app = FastAPI()
 

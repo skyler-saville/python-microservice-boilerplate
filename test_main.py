@@ -1,6 +1,10 @@
 from fastapi.testclient import TestClient
+import nltk
 from main import app
 from mylib.logic import wiki as summary_wiki
+
+
+nltk.download("brown")
 
 client = TestClient(app)
 
