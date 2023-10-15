@@ -17,7 +17,7 @@ lint:
 
 test:
 	#test
-	python -m pytest -vv --cov=mylib --cov=main test_*.py
+	python -m pytest -vv --cov=mylib/tests --cov=main test_*.py mylib/tests/test_*.py
 
 build: 
 	#build container
