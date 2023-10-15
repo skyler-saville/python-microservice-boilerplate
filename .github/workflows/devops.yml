@@ -24,6 +24,7 @@ jobs:
       run: |
         make format
     - name: Build Container
+      run: |
         make build
     
     
