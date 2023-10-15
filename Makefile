@@ -1,8 +1,10 @@
 install:
 	#install commands
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt &&\
-			python -m textblob.download_corpora 
+		pip install -r requirements.txt
+post-install:
+	#install textblob dependency
+	python -m textblob.download_corpora
 format:
 	#format the code
 	black *.py mylib/*.py
@@ -20,4 +22,4 @@ run:
 	# docker run -p 127.0.0.1:8080:8080 ff737554cc9d
 deploy:
 	#deploy
-all: install lint test deploy
+all: install post-install lint test deploy
