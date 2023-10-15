@@ -1,4 +1,4 @@
-from mylib.logic import wiki
+from mylib.logic.business_logic import wiki
 
 
 def test_wiki():
